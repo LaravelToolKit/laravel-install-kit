@@ -1,7 +1,7 @@
 {
     "name": "shawnsandy/simple_pack",
     "type": "library",
-    "description": ":package_description",
+    "description": "A simple starter package for creating composer packages, based on php-league skelton",
     "keywords": [
         "shawnsandy",
         "simple_pack"
