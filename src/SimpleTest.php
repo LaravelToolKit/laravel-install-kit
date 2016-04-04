@@ -2,7 +2,7 @@
 
 namespace ShawnSandy\SimplePack;
 
-class SkeletonClass
+class SimpleTest
 {
     /**
      * Create a new Skeleton Instance
