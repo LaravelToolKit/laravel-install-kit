@@ -56,13 +56,13 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/shawnsandy/simple_kit.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/shawnsandy/simple_kit/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/LaravelToolKit/simple_pack/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/shawnsandy/simple_kit.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/shawnsandy/simple_kit.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/shawnsandy/simple_kit.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/shawnsandy/simple_kit
-[link-travis]: https://travis-ci.org/shawnsandy/simple_kit
+[link-travis]: https://travis-ci.org/LaravelToolKit/simple_pack
 [link-scrutinizer]: https://scrutinizer-ci.com/g/shawnsandy/simple_kit/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/shawnsandy/simple_kit
 [link-downloads]: https://packagist.org/packages/shawnsandy/simple_kit
