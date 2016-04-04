@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "shawnsandy\\simple_pack\\": "src"
+            "ShawnSandy\\SimplePack\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "shawnsandy\\simple_pack\\": "tests"
+            "ShawnSandy\\SimplePack\\": "tests"
         }
     },
     "scripts": {
