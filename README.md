@@ -17,6 +17,27 @@ Via Composer
 ``` bash
 $ composer require shawnsandy/laravel-install-kit
 ```
+__Add to you__ `config/app.php -- providers`
+
+``` php
+    /*
+    * Vendor Service Providers
+    */
+    Barryvdh\Debugbar\ServiceProvider::class,
+    Collective\Html\HtmlServiceProvider::class,
+    Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+    Maatwebsite\Excel\ExcelServiceProvider::class,
+```
+
+__Add to__ `config/app.php -- aliases`
+
+``` php
+    'Debugbar' => Barryvdh\Debugbar\Facade::class,
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
+    'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+```
+
 
 ## Usage
 

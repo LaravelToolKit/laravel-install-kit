@@ -6,7 +6,7 @@
     "shawnsandy",
     "laravel-install-kit"
   ],
-  "homepage": "https://github.com/shawnsandy/laravel-install-kit",
+  "homepage": "https://github.com/LaravelToolKit/laravel-install-kit",
   "license": "MIT",
   "authors": [
     {
@@ -24,13 +24,17 @@
   ],
   "require": {
     "php": "~5.5|~7.0",
-    "spatie/laravel-analytics": "^1.3"
+    "barryvdh/laravel-debugbar": "^2.2",
+    "laravelcollective/html": "^5.2",
+    "doctrine/dbal": "^2.5",
+    "barryvdh/laravel-ide-helper": "^2.1",
+    "maatwebsite/excel": "^2.1"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
     "scrutinizer/ocular": "~1.1",
-    "squizlabs/php_codesniffer": "~2.3"
-
+    "squizlabs/php_codesniffer": "~2.3",
+    "laracasts/generators": "^1.1"
   },
   "autoload": {
     "psr-4": {
