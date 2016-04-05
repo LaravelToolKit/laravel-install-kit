@@ -24,7 +24,8 @@
   ],
   "require": {
     "php": "~5.5|~7.0",
-    "shawnsandy/simple_pack": "dev-master"
+    "shawnsandy/simple_pack": "dev-master",
+    "spatie/laravel-analytics": "^1.3"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
