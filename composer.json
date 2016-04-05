@@ -1,12 +1,12 @@
 {
-    "name": "shawnsandy/simple_pack",
+    "name": "shawnsandy/laravel-install-kit",
     "type": "library",
     "description": "A simple starter package for creating composer packages, based on php-league skelton",
     "keywords": [
         "shawnsandy",
-        "simple_pack"
+        "laravel-install-kit"
     ],
-    "homepage": "https://github.com/shawnsandy/simple_pack",
+    "homepage": "https://github.com/shawnsandy/laravel-install-kit",
     "license": "MIT",
     "authors": [
         {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ShawnSandy\\SimplePack\\": "src"
+            "ShawnSandy\\InstallKit\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShawnSandy\\SimplePack\\": "tests"
+            "ShawnSandy\\InstallKit\\": "tests"
         }
     },
     "scripts": {
