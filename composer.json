@@ -23,13 +23,14 @@
     }
   ],
   "require": {
-    "php": "~5.5|~7.0"
+    "php": "~5.5|~7.0",
+    "shawnsandy/simple_pack": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
     "scrutinizer/ocular": "~1.1",
     "squizlabs/php_codesniffer": "~2.3",
-    "shawnsandy/simple_pack": "dev-master"
+
   },
   "autoload": {
     "psr-4": {
