@@ -37,7 +37,8 @@
     "mpociot/laravel-test-factory-helper": "^0.2.0",
     "laravel/socialite": "^2.0",
     "spatie/googlesearch": "^2.0",
-    "styde/html": "~1.1"
+    "styde/html": "~1.1",
+    "jeroen-g/laravel-packager": "^1.4"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
