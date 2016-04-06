@@ -12,7 +12,8 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ### Packages
 
-```
+``` php
+
     "php": "~5.5|~7.0",
     "barryvdh/laravel-debugbar": "^2.2",
     "laravelcollective/html": "^5.2",
@@ -36,6 +37,7 @@ PSRs you support to avoid any confusion with users and contributors.
         "laracasts/generators": "^1.1"
 ```
 
+
 ## Install
 
 Via Composer
@@ -43,9 +45,12 @@ Via Composer
 ``` bash
 $ composer require shawnsandy/laravel-install-kit
 ```
-__Add to you__ `config/app.php -- providers`
+__Providers__ `config/app.php -- providers`
+
 
 ``` php
+
+$providers => [
     /*
     * Vendor Service Providers
     */
@@ -53,17 +58,31 @@ __Add to you__ `config/app.php -- providers`
     Collective\Html\HtmlServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     Maatwebsite\Excel\ExcelServiceProvider::class,
+
+    ]
 ```
 
-__Add to__ `config/app.php -- aliases`
+__Aliases__ `config/app.php -- aliases`
 
 ``` php
+
+$aliases => [
     'Debugbar' => Barryvdh\Debugbar\Facade::class,
     'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
     'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    ]
 ```
 
+__Middleware__ `app/Http/Kernel.php`
+``` php
+
+protected $routeMiddleware = [
+  ...
+  'can' => \Spatie\Authorize\Middleware\Authorize::class,
+];
+
+```
 
 ## Usage
 
