@@ -10,6 +10,32 @@
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
 
+### Packages
+
+```
+    "php": "~5.5|~7.0",
+    "barryvdh/laravel-debugbar": "^2.2",
+    "laravelcollective/html": "^5.2",
+    "doctrine/dbal": "^2.5",
+    "barryvdh/laravel-ide-helper": "^2.1",
+    "maatwebsite/excel": "^2.1",
+    "spatie/laravel-analytics": "^1.3",
+    "spatie/laravel-medialibrary": "^3.17",
+    "spatie/laravel-permission": "^1.3",
+    "spatie/laravel-authorize": "^1.1",
+    "spatie/geocoder": "^2.1",
+    "mpociot/laravel-test-factory-helper": "^0.2.0",
+    "laravel/socialite": "^2.0",
+    "spatie/googlesearch": "^2.0"
+
+    ----- devs ------
+
+    "phpunit/phpunit": "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3",
+        "laracasts/generators": "^1.1"
+```
+
 ## Install
 
 Via Composer
