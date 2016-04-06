@@ -35,7 +35,8 @@
     "spatie/laravel-authorize": "^1.1",
     "spatie/geocoder": "^2.1",
     "mpociot/laravel-test-factory-helper": "^0.2.0",
-    "laravel/socialite": "^2.0"
+    "laravel/socialite": "^2.0",
+    "spatie/googlesearch": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
