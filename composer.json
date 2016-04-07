@@ -38,13 +38,17 @@
     "laravel/socialite": "^2.0",
     "spatie/googlesearch": "^2.0",
     "styde/html": "~1.1",
-    "jeroen-g/laravel-packager": "^1.4"
+    "laracasts/utilities": "^2.1",
+    "jeroen-g/laravel-packager": "^1.4",
+    "laracasts/flash": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
     "scrutinizer/ocular": "~1.1",
     "squizlabs/php_codesniffer": "~2.3",
-    "laracasts/generators": "^1.1"
+    "laracasts/generators": "^1.1",
+    "infyomlabs/laravel-generator": "dev-master",
+    "infyomlabs/core-templates": "dev-master"
   },
   "autoload": {
     "psr-4": {
