@@ -12,7 +12,8 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ### Packages
 
-```
+``` php
+
     "php": "~5.5|~7.0",
     "barryvdh/laravel-debugbar": "^2.2",
     "laravelcollective/html": "^5.2",
@@ -31,10 +32,11 @@ PSRs you support to avoid any confusion with users and contributors.
     ----- devs ------
 
     "phpunit/phpunit": "4.*",
-        "scrutinizer/ocular": "~1.1",
-        "squizlabs/php_codesniffer": "~2.3",
-        "laracasts/generators": "^1.1"
+    "scrutinizer/ocular": "~1.1",
+    "squizlabs/php_codesniffer": "~2.3",
+    "laracasts/generators": "^1.1"
 ```
+
 
 ## Install
 
@@ -43,9 +45,12 @@ Via Composer
 ``` bash
 $ composer require shawnsandy/laravel-install-kit
 ```
-__Add to you__ `config/app.php -- providers`
+__Providers__ `config/app.php -- providers`
 
 ``` php
+
+$providers => [
+
     /*
     * Vendor Service Providers
     */
@@ -53,17 +58,68 @@ __Add to you__ `config/app.php -- providers`
     Collective\Html\HtmlServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     Maatwebsite\Excel\ExcelServiceProvider::class,
+    Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider::class,
+    Spatie\Authorize\AuthorizeServiceProvider::class,
+    Spatie\Permission\PermissionServiceProvider::class,
+    Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+    Spatie\Geocoder\GeocoderServiceProvider::class,
+    Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
+    Styde\Html\HtmlServiceProvider::class,
+
+    ]
 ```
 
-__Add to__ `config/app.php -- aliases`
+__Aliases__ `config/app.php -- aliases`
 
 ``` php
+
+$aliases => [
+
+    /*
+     * Vendor aliases
+     */
     'Debugbar' => Barryvdh\Debugbar\Facade::class,
     'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
+    'Geocoder' => Spatie\Geocoder\GeocoderFacade::class,
+    'LaravelAnalytics' => Spatie\LaravelAnalytics\LaravelAnalyticsFacade::class,
     'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    'Alert' => Styde\Html\Facades\Alert::class,
+    'Field' => Styde\Html\Facades\Field::class,
+    'Menu' => Styde\Html\Facades\Menu::class,
+
+    ]
 ```
 
+__Middleware__ `app/Http/Kernel.php`
+``` php
+
+protected $routeMiddleware = [
+  ...
+  'can' => \Spatie\Authorize\Middleware\Authorize::class,
+];
+
+```
+
+__Providers__
+
+```
+    /**
+       * Register any application services.
+       *
+       * @return void
+       */
+      public function register()
+      {
+          /*
+           * Custom providers
+           */
+          if ($this->app->environment() == 'local') {
+              $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+          }
+      }
+
+```
 
 ## Usage
 
