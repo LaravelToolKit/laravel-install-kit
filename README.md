@@ -32,9 +32,9 @@ PSRs you support to avoid any confusion with users and contributors.
     ----- devs ------
 
     "phpunit/phpunit": "4.*",
-        "scrutinizer/ocular": "~1.1",
-        "squizlabs/php_codesniffer": "~2.3",
-        "laracasts/generators": "^1.1"
+    "scrutinizer/ocular": "~1.1",
+    "squizlabs/php_codesniffer": "~2.3",
+    "laracasts/generators": "^1.1"
 ```
 
 
