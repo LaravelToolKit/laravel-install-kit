@@ -101,6 +101,26 @@ protected $routeMiddleware = [
 
 ```
 
+__Providers__
+
+```
+    /**
+       * Register any application services.
+       *
+       * @return void
+       */
+      public function register()
+      {
+          /*
+           * Custom providers
+           */
+          if ($this->app->environment() == 'local') {
+              $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+          }
+      }
+
+```
+
 ## Usage
 
 
