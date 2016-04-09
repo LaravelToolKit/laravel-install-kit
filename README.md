@@ -65,6 +65,7 @@ $providers => [
     Spatie\Geocoder\GeocoderServiceProvider::class,
     Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
     Styde\Html\HtmlServiceProvider::class,
+    Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
 
     ]
 ```
