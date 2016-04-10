@@ -69,6 +69,7 @@ $providers => [
     Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
     Vinkla\Hashids\HashidsServiceProvider::class,
+    Mews\Purifier\PurifierServiceProvider::class,
 
     ]
 ```
@@ -92,6 +93,7 @@ $aliases => [
     'Field' => Styde\Html\Facades\Field::class,
     'Menu' => Styde\Html\Facades\Menu::class,
     'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
+    'Purifier' => Mews\Purifier\Facades\Purifier::class,
 
     ]
 ```
