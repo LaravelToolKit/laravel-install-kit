@@ -66,6 +66,7 @@ $providers => [
     Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
     Styde\Html\HtmlServiceProvider::class,
     Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+    Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
     ]
 ```
