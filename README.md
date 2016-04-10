@@ -71,6 +71,7 @@ $providers => [
     Vinkla\Hashids\HashidsServiceProvider::class,
     Mews\Purifier\PurifierServiceProvider::class,
     Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+    Barryvdh\Elfinder\ElfinderServiceProvider::class,
 
     ]
 ```
