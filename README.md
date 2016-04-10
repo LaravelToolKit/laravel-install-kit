@@ -5,10 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```shawn sandy``` ```shawnsandy``` ```shawnsandy.com``` ```shawnsandy04@gmail.com``` ```shawnsandy``` ```laravel-install-kit``` ```Simple desctriptiption``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+A simple toolkit that contains and installs most of the Laravel packages I need to get you up and running quickly on PHP projects.
 
 ### Packages
 
@@ -27,16 +24,20 @@ PSRs you support to avoid any confusion with users and contributors.
     "spatie/geocoder": "^2.1",
     "mpociot/laravel-test-factory-helper": "^0.2.0",
     "laravel/socialite": "^2.0",
-    "spatie/googlesearch": "^2.0"
+    "spatie/googlesearch": "^2.0",
+    "styde/html": "~1.1",
+    "laracasts/utilities": "^2.1",
+    "jeroen-g/laravel-packager": "^1.4",
+    "laracasts/flash": "^2.0",
 
-    ----- devs ------
-
-    "phpunit/phpunit": "4.*",
-    "scrutinizer/ocular": "~1.1",
-    "squizlabs/php_codesniffer": "~2.3",
-    "laracasts/generators": "^1.1"
 ```
+__Dev packages__ install on your ows
 
+``` php
+
+    "laracasts/generators": "^1.1"
+
+```
 
 ## Install
 
@@ -48,7 +49,6 @@ $ composer require shawnsandy/laravel-install-kit
 __Providers__ `config/app.php -- providers`
 
 ``` php
-
 $providers => [
 
     /*
@@ -63,8 +63,15 @@ $providers => [
     Spatie\Permission\PermissionServiceProvider::class,
     Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
     Spatie\Geocoder\GeocoderServiceProvider::class,
+    Spatie\Activitylog\ActivitylogServiceProvider::class,
     Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
     Styde\Html\HtmlServiceProvider::class,
+    Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+    Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+    Vinkla\Hashids\HashidsServiceProvider::class,
+    Mews\Purifier\PurifierServiceProvider::class,
+    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+    Barryvdh\Elfinder\ElfinderServiceProvider::class,
 
     ]
 ```
@@ -87,11 +94,15 @@ $aliases => [
     'Alert' => Styde\Html\Facades\Alert::class,
     'Field' => Styde\Html\Facades\Field::class,
     'Menu' => Styde\Html\Facades\Menu::class,
+    'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
+    'Purifier' => Mews\Purifier\Facades\Purifier::class,
+    'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ]
 ```
 
 __Middleware__ `app/Http/Kernel.php`
+
 ``` php
 
 protected $routeMiddleware = [
