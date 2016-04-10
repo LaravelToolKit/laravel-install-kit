@@ -70,6 +70,7 @@ $providers => [
     Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
     Vinkla\Hashids\HashidsServiceProvider::class,
     Mews\Purifier\PurifierServiceProvider::class,
+    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
     ]
 ```
@@ -94,6 +95,7 @@ $aliases => [
     'Menu' => Styde\Html\Facades\Menu::class,
     'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
     'Purifier' => Mews\Purifier\Facades\Purifier::class,
+    'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ]
 ```
