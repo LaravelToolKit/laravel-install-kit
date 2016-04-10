@@ -63,10 +63,12 @@ $providers => [
     Spatie\Permission\PermissionServiceProvider::class,
     Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
     Spatie\Geocoder\GeocoderServiceProvider::class,
+    Spatie\Activitylog\ActivitylogServiceProvider::class,
     Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
     Styde\Html\HtmlServiceProvider::class,
     Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+    Vinkla\Hashids\HashidsServiceProvider::class,
 
     ]
 ```
@@ -89,6 +91,7 @@ $aliases => [
     'Alert' => Styde\Html\Facades\Alert::class,
     'Field' => Styde\Html\Facades\Field::class,
     'Menu' => Styde\Html\Facades\Menu::class,
+    'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
 
     ]
 ```
