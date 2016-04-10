@@ -72,6 +72,7 @@ $providers => [
     Mews\Purifier\PurifierServiceProvider::class,
     Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
     Barryvdh\Elfinder\ElfinderServiceProvider::class,
+    Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
     ]
 ```
@@ -97,6 +98,7 @@ $aliases => [
     'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
     'Purifier' => Mews\Purifier\Facades\Purifier::class,
     'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+    'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
 
     ]
 ```

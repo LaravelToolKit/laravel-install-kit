@@ -48,7 +48,8 @@
     "spatie/activitylog": "^2.4",
     "mews/purifier": "^2.0",
     "mcamara/laravel-localization": "^1.1",
-    "barryvdh/laravel-elfinder": "^0.3.7"
+    "barryvdh/laravel-elfinder": "^0.3.7",
+    "greggilbert/recaptcha": "^2.1"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
