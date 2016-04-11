@@ -4,13 +4,16 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
+
 
 A simple toolkit that contains and installs most of the Laravel packages I need to get you up and running quickly on PHP projects.
 
 ### Packages
 
-``` php
+``` json
 
+ "require": {
     "php": "~5.5|~7.0",
     "barryvdh/laravel-debugbar": "^2.2",
     "laravelcollective/html": "^5.2",
@@ -29,6 +32,16 @@ A simple toolkit that contains and installs most of the Laravel packages I need 
     "laracasts/utilities": "^2.1",
     "jeroen-g/laravel-packager": "^1.4",
     "laracasts/flash": "^2.0",
+    "laracasts/generators": "^1.1",
+    "cviebrock/eloquent-sluggable": "^3.1",
+    "rap2hpoutre/laravel-log-viewer": "^0.6.0",
+    "vinkla/hashids": "^2.2",
+    "spatie/activitylog": "^2.4",
+    "mews/purifier": "^2.0",
+    "mcamara/laravel-localization": "^1.1",
+    "barryvdh/laravel-elfinder": "^0.3.7",
+    "greggilbert/recaptcha": "^2.1"
+  },
 
 ```
 __Dev packages__ install on your ows
@@ -72,6 +85,7 @@ $providers => [
     Mews\Purifier\PurifierServiceProvider::class,
     Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
     Barryvdh\Elfinder\ElfinderServiceProvider::class,
+    Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
     ]
 ```
@@ -97,6 +111,7 @@ $aliases => [
     'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
     'Purifier' => Mews\Purifier\Facades\Purifier::class,
     'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+    'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
 
     ]
 ```
