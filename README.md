@@ -4,6 +4,8 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
+
 
 A simple toolkit that contains and installs most of the Laravel packages I need to get you up and running quickly on PHP projects.
 
