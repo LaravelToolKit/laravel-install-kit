@@ -86,6 +86,7 @@ $providers => [
     Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
     Barryvdh\Elfinder\ElfinderServiceProvider::class,
     Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+    Sven\ArtisanView\ArtisanViewServiceProvider::class,
 
     ]
 ```
