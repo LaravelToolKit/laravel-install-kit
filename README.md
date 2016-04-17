@@ -42,7 +42,8 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
     "barryvdh/laravel-elfinder": "^0.3.7",
     "greggilbert/recaptcha": "^2.1",
     "sven/artisan-view": "^1.0",
-    "pragmarx/tracker": "^2.0"
+    "pragmarx/tracker": "^2.0",
+    "fedeisas/laravel-mail-css-inliner": "^1.4"
   },
 
 ```
@@ -91,6 +92,7 @@ $providers => [
     Sven\ArtisanView\ArtisanViewServiceProvider::class,
     Vinkla\Hashids\HashidsServiceProvider::class,
     PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
+    Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class
 
     ]
 ```
