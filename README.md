@@ -40,7 +40,9 @@ A simple toolkit that contains and installs most of the Laravel packages I need 
     "mews/purifier": "^2.0",
     "mcamara/laravel-localization": "^1.1",
     "barryvdh/laravel-elfinder": "^0.3.7",
-    "greggilbert/recaptcha": "^2.1"
+    "greggilbert/recaptcha": "^2.1",
+    "sven/artisan-view": "^1.0",
+    "pragmarx/tracker": "^2.0"
   },
 
 ```
@@ -87,6 +89,8 @@ $providers => [
     Barryvdh\Elfinder\ElfinderServiceProvider::class,
     Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
     Sven\ArtisanView\ArtisanViewServiceProvider::class,
+    Vinkla\Hashids\HashidsServiceProvider::class,
+    PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
 
     ]
 ```
@@ -113,6 +117,8 @@ $aliases => [
     'Purifier' => Mews\Purifier\Facades\Purifier::class,
     'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
     'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+    'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
+    'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
 
     ]
 ```
