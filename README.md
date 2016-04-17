@@ -7,7 +7,7 @@
 [![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
 
 
-A simple toolkit that contains and installs most of the Laravel packages I need to get you up and running quickly on PHP projects.
+A simple Laravel PHP toolkit that contains and installs most of the Laravel packages  that I regularly need to get project up and running.
 
 ### Packages
 
