@@ -53,7 +53,8 @@
     "sven/artisan-view": "^1.0",
     "fedeisas/laravel-mail-css-inliner": "^1.4",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
-    "kris/laravel-form-builder": "^1.6"
+    "kris/laravel-form-builder": "^1.6",
+    "sofa/revisionable": "^5.2"
 
   },
   "require-dev": {

@@ -96,6 +96,7 @@ $providers => [
     DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
     Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
     JeroenG\Packager\PackagerServiceProvider::class,
+    Sofa\Revisionable\Laravel\ServiceProvider::class,
 
     ]
 ```
