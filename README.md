@@ -264,6 +264,7 @@ __Laravel Mail CSS-Inliner__ https://github.com/fedeisas/laravel-mail-css-inline
 
 __Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
 
+__Sofa/Revionable__ https://github.com/jarektkaczyk/revisionable
 
 
 ## Change log
