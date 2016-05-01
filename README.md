@@ -7,7 +7,7 @@
 [![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
 
 
-A simple Laravel PHP toolkit that contains and installs most of the Laravel packages  that I regularly need to get project up and running.
+A simple Laravel PHP toolkit that contains and installs most of the Laravel packages that I regularly need to get ky laravel projects up and running. It replace the need for stater kits like laravel-hackaton-starter https://github.com/unicodeveloper/laravel-hackathon-starter, not that these are bad I just prefer to roll my own on top of fresh install of laravel  `laravel new blog` or `composer create-project --prefer-dist laravel/laravel blog`, just keeps me sane `;-)`.
 
 ### Packages
 
@@ -259,6 +259,12 @@ __Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 __Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 
 __Google ReCaptcha__ https://github.com/greggilbert/recaptcha
+
+__Laravel Mail CSS-Inliner__ https://github.com/fedeisas/laravel-mail-css-inliner
+
+__Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
+
+
 
 ## Change log
 
