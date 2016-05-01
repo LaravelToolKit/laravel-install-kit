@@ -41,13 +41,14 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
     "mcamara/laravel-localization": "^1.1",
     "barryvdh/laravel-elfinder": "^0.3.7",
     "greggilbert/recaptcha": "^2.1",
-    "sven/artisan-view": "^1.0",
-    "pragmarx/tracker": "^2.0",
-    "fedeisas/laravel-mail-css-inliner": "^1.4"
+    "sven/artisan-view": "^1.0"
+    "fedeisas/laravel-mail-css-inliner": "^1.4",
+    "davejamesmiller/laravel-breadcrumbs": "^3.0",
+    "kris/laravel-form-builder": "^1.6"
   },
 
 ```
-__Dev packages__ install on your ows
+__Dev packages__ install on your own
 
 ``` php
 
@@ -60,7 +61,7 @@ __Dev packages__ install on your ows
 Via Composer
 
 ``` bash
-$ composer require shawnsandy/laravel-install-kit
+    $ composer require shawnsandy/laravel-install-kit
 ```
 __Providers__ `config/app.php -- providers`
 
@@ -91,8 +92,10 @@ $providers => [
     Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
     Sven\ArtisanView\ArtisanViewServiceProvider::class,
     Vinkla\Hashids\HashidsServiceProvider::class,
-    PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
-    Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class
+    Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class,
+    DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+    Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+    JeroenG\Packager\PackagerServiceProvider::class,
 
     ]
 ```
@@ -107,7 +110,6 @@ $aliases => [
      * Vendor aliases
      */
     'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
     'Geocoder' => Spatie\Geocoder\GeocoderFacade::class,
     'LaravelAnalytics' => Spatie\LaravelAnalytics\LaravelAnalyticsFacade::class,
@@ -121,17 +123,31 @@ $aliases => [
     'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
     'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
     'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
+    'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+    'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
 
     ]
+
 ```
 
-__Middleware__ `app/Http/Kernel.php`
+__Middleware__
+
+``` php
+    protected $middleware = [
+        //...
+        \Styde\Html\Alert\Middleware::class,
+        //...
+    ];
+```
+
+__Middleware (Route)__ `app/Http/Kernel.php`
 
 ``` php
 
 protected $routeMiddleware = [
   ...
   'can' => \Spatie\Authorize\Middleware\Authorize::class,
+
 ];
 
 ```
@@ -156,8 +172,93 @@ __Providers__
 
 ```
 
-## Usage
+# Usage
 
+## Packages / Artisan Commands
+
+__Laravel Debugbar__
+
+``` bash
+    php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+```
+
+__StydeNet Html__ https://github.com/StydeNet/html
+
+``` bash
+    php artisan vendor:publish --provider='Styde\Html\HtmlServiceProvider'
+```
+
+__Laravel Packages__ https://github.com/Jeroen-G/laravel-packager
+
+__Laravel 5 IDE Helper Generator__ https://github.com/barryvdh/laravel-ide-helper
+
+``` bash
+    php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+```
+
+__Laravel Analytics__ https://github.com/spatie/laravel-analytics
+
+``` bash
+
+
+    php artisan vendor:publish --provider="Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider"
+
+
+```
+
+__Laravel Media Library__ https://github.com/spatie/laravel-medialibrary
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
+
+```
+
+__Laravel Authorize__ https://github.com/spatie/laravel-authorize
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\Authorize\AuthorizeServiceProvider"
+
+```
+
+__Laravel Geocoder__
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\Authorize\AuthorizeServiceProvider"
+
+```
+
+__Laravel Test Factory Generator__ https://github.com/mpociot/laravel-test-factory-helper
+
+__Laravel Google Search__ https://github.com/spatie/googlesearch
+
+``` bash
+
+     php artisan vendor:publish --provider="Spatie\GoogleSearch\GoogleSearchServiceProvider"
+
+ ```
+
+__Laravel Flash__ https://github.com/laracasts/flash
+
+__Eloquent-Sluggable__ https://github.com/cviebrock/eloquent-sluggable
+
+__Laravel log viewer__ https://github.com/rap2hpoutre/laravel-log-viewer
+
+__Laravel Hashids__ https://github.com/vinkla/hashids
+
+__Laravel Activity Log__ https://github.com/spatie/activitylog
+
+__Laravel Localization__ https://github.com/spatie/activitylog
+
+__Laravel Localization__ https://github.com/spatie/activitylog
+
+__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
+
+__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
+
+__Google ReCaptcha__ https://github.com/greggilbert/recaptcha
 
 ## Change log
 
@@ -166,7 +267,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-$ composer test
+    $ composer test
 ```
 
 ## Contributing
