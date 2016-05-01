@@ -7,7 +7,7 @@
 [![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
 
 
-A simple toolkit that contains and installs most of the Laravel packages I need to get you up and running quickly on PHP projects.
+A simple Laravel PHP toolkit that contains and installs most of the Laravel packages that I regularly need to get ky laravel projects up and running. It replace the need for stater kits like laravel-hackaton-starter https://github.com/unicodeveloper/laravel-hackathon-starter, not that these are bad I just prefer to roll my own on top of fresh install of laravel  `laravel new blog` or `composer create-project --prefer-dist laravel/laravel blog`, just keeps me sane `;-)`.
 
 ### Packages
 
@@ -40,11 +40,15 @@ A simple toolkit that contains and installs most of the Laravel packages I need 
     "mews/purifier": "^2.0",
     "mcamara/laravel-localization": "^1.1",
     "barryvdh/laravel-elfinder": "^0.3.7",
-    "greggilbert/recaptcha": "^2.1"
+    "greggilbert/recaptcha": "^2.1",
+    "sven/artisan-view": "^1.0"
+    "fedeisas/laravel-mail-css-inliner": "^1.4",
+    "davejamesmiller/laravel-breadcrumbs": "^3.0",
+    "kris/laravel-form-builder": "^1.6"
   },
 
 ```
-__Dev packages__ install on your ows
+__Dev packages__ install on your own
 
 ``` php
 
@@ -57,7 +61,7 @@ __Dev packages__ install on your ows
 Via Composer
 
 ``` bash
-$ composer require shawnsandy/laravel-install-kit
+    $ composer require shawnsandy/laravel-install-kit
 ```
 __Providers__ `config/app.php -- providers`
 
@@ -86,6 +90,13 @@ $providers => [
     Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
     Barryvdh\Elfinder\ElfinderServiceProvider::class,
     Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+    Sven\ArtisanView\ArtisanViewServiceProvider::class,
+    Vinkla\Hashids\HashidsServiceProvider::class,
+    Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class,
+    DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+    Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+    JeroenG\Packager\PackagerServiceProvider::class,
+    Sofa\Revisionable\Laravel\ServiceProvider::class,
 
     ]
 ```
@@ -100,7 +111,6 @@ $aliases => [
      * Vendor aliases
      */
     'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
     'Geocoder' => Spatie\Geocoder\GeocoderFacade::class,
     'LaravelAnalytics' => Spatie\LaravelAnalytics\LaravelAnalyticsFacade::class,
@@ -112,17 +122,33 @@ $aliases => [
     'Purifier' => Mews\Purifier\Facades\Purifier::class,
     'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
     'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+    'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
+    'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
+    'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+    'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
 
     ]
+
 ```
 
-__Middleware__ `app/Http/Kernel.php`
+__Middleware__
+
+``` php
+    protected $middleware = [
+        //...
+        \Styde\Html\Alert\Middleware::class,
+        //...
+    ];
+```
+
+__Middleware (Route)__ `app/Http/Kernel.php`
 
 ``` php
 
 protected $routeMiddleware = [
   ...
   'can' => \Spatie\Authorize\Middleware\Authorize::class,
+
 ];
 
 ```
@@ -147,7 +173,99 @@ __Providers__
 
 ```
 
-## Usage
+# Usage
+
+## Packages / Artisan Commands
+
+__Laravel Debugbar__
+
+``` bash
+    php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+```
+
+__StydeNet Html__ https://github.com/StydeNet/html
+
+``` bash
+    php artisan vendor:publish --provider='Styde\Html\HtmlServiceProvider'
+```
+
+__Laravel Packages__ https://github.com/Jeroen-G/laravel-packager
+
+__Laravel 5 IDE Helper Generator__ https://github.com/barryvdh/laravel-ide-helper
+
+``` bash
+    php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+```
+
+__Laravel Analytics__ https://github.com/spatie/laravel-analytics
+
+``` bash
+
+
+    php artisan vendor:publish --provider="Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider"
+
+
+```
+
+__Laravel Media Library__ https://github.com/spatie/laravel-medialibrary
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
+
+```
+
+__Laravel Authorize__ https://github.com/spatie/laravel-authorize
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\Authorize\AuthorizeServiceProvider"
+
+```
+
+__Laravel Geocoder__
+
+``` bash
+
+    php artisan vendor:publish --provider="Spatie\Authorize\AuthorizeServiceProvider"
+
+```
+
+__Laravel Test Factory Generator__ https://github.com/mpociot/laravel-test-factory-helper
+
+__Laravel Google Search__ https://github.com/spatie/googlesearch
+
+``` bash
+
+     php artisan vendor:publish --provider="Spatie\GoogleSearch\GoogleSearchServiceProvider"
+
+ ```
+
+__Laravel Flash__ https://github.com/laracasts/flash
+
+__Eloquent-Sluggable__ https://github.com/cviebrock/eloquent-sluggable
+
+__Laravel log viewer__ https://github.com/rap2hpoutre/laravel-log-viewer
+
+__Laravel Hashids__ https://github.com/vinkla/hashids
+
+__Laravel Activity Log__ https://github.com/spatie/activitylog
+
+__Laravel Localization__ https://github.com/spatie/activitylog
+
+__Laravel Localization__ https://github.com/spatie/activitylog
+
+__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
+
+__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
+
+__Google ReCaptcha__ https://github.com/greggilbert/recaptcha
+
+__Laravel Mail CSS-Inliner__ https://github.com/fedeisas/laravel-mail-css-inliner
+
+__Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
+
+__Sofa/Revionable__ https://github.com/jarektkaczyk/revisionable
 
 
 ## Change log
@@ -157,7 +275,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-$ composer test
+    $ composer test
 ```
 
 ## Contributing
