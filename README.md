@@ -44,7 +44,8 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
     "sven/artisan-view": "^1.0"
     "fedeisas/laravel-mail-css-inliner": "^1.4",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
-    "kris/laravel-form-builder": "^1.6"
+    "kris/laravel-form-builder": "^1.6",
+
   },
 
 ```
@@ -71,6 +72,7 @@ $providers => [
     /*
     * Vendor Service Providers
     */
+    Laravel\Socialite\SocialiteServiceProvider::class,
     Barryvdh\Debugbar\ServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
@@ -97,6 +99,7 @@ $providers => [
     Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
     JeroenG\Packager\PackagerServiceProvider::class,
     Sofa\Revisionable\Laravel\ServiceProvider::class,
+    GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
 
     ]
 ```
@@ -126,6 +129,7 @@ $aliases => [
     'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
     'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
     'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ]
 
@@ -266,6 +270,8 @@ __Laravel Mail CSS-Inliner__ https://github.com/fedeisas/laravel-mail-css-inline
 __Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
 
 __Sofa/Revionable__ https://github.com/jarektkaczyk/revisionable
+
+__Laravel Exceptions__ https://github.com/GrahamCampbell/Laravel-Exceptions
 
 
 ## Change log
