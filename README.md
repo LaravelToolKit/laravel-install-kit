@@ -227,7 +227,7 @@ __Laravel Authorize__ https://github.com/spatie/laravel-authorize
 
 ```
 
-__Laravel Geocoder__
+__Laravel Geocoder__ https://github.com/spatie/geocoder
 
 ``` bash
 
