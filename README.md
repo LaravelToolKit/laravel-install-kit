@@ -280,6 +280,10 @@ __Laravel Analytics__ https://github.com/ipunkt/laravel-analytics
 
 __Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 
+__Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
+
+__Laravel Generator GUI__ http://labs.infyom.com/laravelgenerator/docs/generator-gui-interface
+
 
 ## Change log
 
