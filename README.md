@@ -100,6 +100,8 @@ $providers => [
     JeroenG\Packager\PackagerServiceProvider::class,
     Sofa\Revisionable\Laravel\ServiceProvider::class,
     GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+    Ipunkt\LaravelAnalytics\AnalyticsServiceProvider::class,
+    Sven\EnvProviders\EnvServiceProvider::class,
 
     ]
 ```
@@ -130,6 +132,7 @@ $aliases => [
     'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
     'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
     'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
 
     ]
 
@@ -272,6 +275,10 @@ __Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
 __Sofa/Revionable__ https://github.com/jarektkaczyk/revisionable
 
 __Laravel Exceptions__ https://github.com/GrahamCampbell/Laravel-Exceptions
+
+__Laravel Analytics__ https://github.com/ipunkt/laravel-analytics
+
+__Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 
 
 ## Change log

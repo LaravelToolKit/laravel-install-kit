@@ -56,7 +56,9 @@
     "kris/laravel-form-builder": "^1.6",
     "sofa/revisionable": "^5.2",
     "graham-campbell/exceptions": "^8.4",
-    "filp/whoops": "^2.1"
+    "filp/whoops": "^2.1",
+    "ipunkt/laravel-analytics": "^1.1",
+    "sven/env-providers": "^2.0"
 
 
   },
