@@ -44,7 +44,8 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
     "sven/artisan-view": "^1.0"
     "fedeisas/laravel-mail-css-inliner": "^1.4",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
-    "kris/laravel-form-builder": "^1.6"
+    "kris/laravel-form-builder": "^1.6",
+
   },
 
 ```
@@ -71,6 +72,7 @@ $providers => [
     /*
     * Vendor Service Providers
     */
+    Laravel\Socialite\SocialiteServiceProvider::class,
     Barryvdh\Debugbar\ServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
@@ -97,6 +99,9 @@ $providers => [
     Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
     JeroenG\Packager\PackagerServiceProvider::class,
     Sofa\Revisionable\Laravel\ServiceProvider::class,
+    GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+    Ipunkt\LaravelAnalytics\AnalyticsServiceProvider::class,
+    Sven\EnvProviders\EnvServiceProvider::class,
 
     ]
 ```
@@ -126,6 +131,8 @@ $aliases => [
     'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
     'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
     'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
 
     ]
 
@@ -223,7 +230,7 @@ __Laravel Authorize__ https://github.com/spatie/laravel-authorize
 
 ```
 
-__Laravel Geocoder__
+__Laravel Geocoder__ https://github.com/spatie/geocoder
 
 ``` bash
 
@@ -266,6 +273,12 @@ __Laravel Mail CSS-Inliner__ https://github.com/fedeisas/laravel-mail-css-inline
 __Laravel Bread Crumbs__ https://github.com/davejamesmiller/laravel-breadcrumbs
 
 __Sofa/Revionable__ https://github.com/jarektkaczyk/revisionable
+
+__Laravel Exceptions__ https://github.com/GrahamCampbell/Laravel-Exceptions
+
+__Laravel Analytics__ https://github.com/ipunkt/laravel-analytics
+
+__Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 
 
 ## Change log

@@ -54,7 +54,12 @@
     "fedeisas/laravel-mail-css-inliner": "^1.4",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
     "kris/laravel-form-builder": "^1.6",
-    "sofa/revisionable": "^5.2"
+    "sofa/revisionable": "^5.2",
+    "graham-campbell/exceptions": "^8.4",
+    "filp/whoops": "^2.1",
+    "ipunkt/laravel-analytics": "^1.1",
+    "sven/env-providers": "^2.0"
+
 
   },
   "require-dev": {
