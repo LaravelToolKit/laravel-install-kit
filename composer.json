@@ -58,8 +58,6 @@
     "filp/whoops": "^2.1",
     "ipunkt/laravel-analytics": "^1.1",
     "sven/env-providers": "^2.0",
-    "infyomlabs/core-templates": "dev-master",
-    "infyomlabs/laravel-generator": "dev-master",
     "anahkiasen/former": "^4.0"
 
 

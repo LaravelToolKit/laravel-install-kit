@@ -294,11 +294,15 @@ __Laravel Analytics__ https://github.com/ipunkt/laravel-analytics
 
 __Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 
+__Former__ https://github.com/formers/former
+
+
+## Recommend Packages
+
 __Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
 
-__Laravel Generator GUI__ http://labs.infyom.com/laravelgenerator/docs/generator-gui-interface
 
-__Former__ https://github.com/formers/former
+__Laravel Generator GUI__ http://labs.infyom.com/laravelgenerator/docs/generator-gui-interface
 
 
 ## Change log
