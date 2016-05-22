@@ -52,7 +52,8 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
    "sven/env-providers": "^2.0",
    "infyomlabs/core-templates": "dev-master",
    "infyomlabs/laravel-generator": "dev-master",
-   "infyomlabs/generator-builder": "dev-master"
+   "infyomlabs/generator-builder": "dev-master",
+
 
   },
 
@@ -114,6 +115,7 @@ $providers => [
     InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
     InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
     Former\FormerServiceProvider::class,
+    Proengsoft\JsValidation\JsValidationServiceProvider::class,
 
     ]
 ```
@@ -146,6 +148,7 @@ $aliases => [
     'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
     'Former' => 'Former\Facades\Former',
+    'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
 
 
     ]
@@ -294,11 +297,14 @@ __Laravel Analytics__ https://github.com/ipunkt/laravel-analytics
 
 __Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 
-__Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
-
-__Laravel Generator GUI__ http://labs.infyom.com/laravelgenerator/docs/generator-gui-interface
-
 __Former__ https://github.com/formers/former
+
+__Laravel JsValidation__ https://github.com/proengsoft/laravel-jsvalidation
+
+
+## Recommend Packages
+
+__Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
 
 
 ## Change log
