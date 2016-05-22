@@ -5,6 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![StyleCI](https://styleci.io/repos/55503103/shield)](https://styleci.io/repos/55503103)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/8563430f-bc8b-4f6d-922d-42666ddacabe/mini.png)](https://insight.sensiolabs.com/projects/8563430f-bc8b-4f6d-922d-42666ddacabe)
 
 
 A simple Laravel PHP toolkit that contains and installs most of the Laravel packages that I regularly need to get ky laravel projects up and running. It replace the need for stater kits like laravel-hackaton-starter https://github.com/unicodeveloper/laravel-hackathon-starter, not that these are bad I just prefer to roll my own on top of fresh install of laravel  `laravel new blog` or `composer create-project --prefer-dist laravel/laravel blog`, just keeps me sane `;-)`.
