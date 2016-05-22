@@ -110,6 +110,10 @@ $providers => [
     GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
     Ipunkt\LaravelAnalytics\AnalyticsServiceProvider::class,
     Sven\EnvProviders\EnvServiceProvider::class,
+    Prettus\Repository\Providers\RepositoryServiceProvider::class,
+    InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+    InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
+    Former\FormerServiceProvider::class,
 
     ]
 ```
@@ -141,6 +145,8 @@ $aliases => [
     'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
     'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
+    'Former' => 'Former\Facades\Former',
+
 
     ]
 
@@ -291,6 +297,8 @@ __Laravel EnvProviders__ https://github.com/svenluijten/env-providers
 __Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
 
 __Laravel Generator GUI__ http://labs.infyom.com/laravelgenerator/docs/generator-gui-interface
+
+__Former__ https://github.com/formers/former
 
 
 ## Change log
