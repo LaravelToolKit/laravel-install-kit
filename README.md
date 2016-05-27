@@ -56,6 +56,7 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
    "infyomlabs/generator-builder": "dev-master",
 
 
+
   },
 
 ```
@@ -117,6 +118,7 @@ $providers => [
     InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
     Former\FormerServiceProvider::class,
     Proengsoft\JsValidation\JsValidationServiceProvider::class,
+    Evercode1\ViewMaker\ViewMakerServiceProvider::class,
 
     ]
 ```
@@ -302,6 +304,11 @@ __Former__ https://github.com/formers/former
 
 __Laravel JsValidation__ https://github.com/proengsoft/laravel-jsvalidation
 
+__View Maker__ https://github.com/evercode1/view-maker
+
+ViewMaker is for use with the Laravel PHP framework (5.2 and up) Artisan command line tool.
+
+ViewMaker adds 10 new artisan commands, providing ready-made templates for CRUD generation, Views and Datagrids, with ajax-powered search, column sorts and pagination. You can create and test a foundation of code with crud and views in under a minute.
 
 ## Recommend Packages
 
