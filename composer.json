@@ -50,7 +50,7 @@
     "mcamara/laravel-localization": "^1.1",
     "barryvdh/laravel-elfinder": "^0.3.7",
     "greggilbert/recaptcha": "^2.1",
-    "sven/artisan-view": "^1.0",
+    "sven/artisan-view": "^3.0",
     "fedeisas/laravel-mail-css-inliner": "^1.4",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
     "sofa/revisionable": "^5.2",
