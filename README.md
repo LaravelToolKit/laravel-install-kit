@@ -52,7 +52,9 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
        "anahkiasen/former": "^4.0",
        "proengsoft/laravel-jsvalidation": "^1.3",
        "evercode1/view-maker": "^3.4",
-       "drawmyattention/laravel-make-resource": "~1.0"
+       "drawmyattention/laravel-make-resource": "~1.0",
+       "anahkiasen/underscore-php": "^2.0","jeroen-g/laravel-packager": "^1.5",
+       "arrilot/laravel-widgets": "^3.4"
 
   },
 
