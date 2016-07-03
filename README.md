@@ -118,6 +118,7 @@ $providers => [
     Former\FormerServiceProvider::class,
     Proengsoft\JsValidation\JsValidationServiceProvider::class,
     Evercode1\ViewMaker\ViewMakerServiceProvider::class,
+    Arrilot\Widgets\ServiceProvider::class,
 
     ]
 ```
@@ -151,6 +152,8 @@ $aliases => [
     'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
     'Former' => 'Former\Facades\Former',
     'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
+    'Widget'       => Arrilot\Widgets\Facade::class,
+    'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
 
 
     ]
@@ -262,10 +265,8 @@ __Laravel Test Factory Generator__ https://github.com/mpociot/laravel-test-facto
 __Laravel Google Search__ https://github.com/spatie/googlesearch
 
 ``` bash
-
      php artisan vendor:publish --provider="Spatie\GoogleSearch\GoogleSearchServiceProvider"
-
- ```
+```
 
 __Laravel Flash__ https://github.com/laracasts/flash
 
@@ -280,8 +281,6 @@ __Laravel Activity Log__ https://github.com/spatie/activitylog
 __Laravel Localization__ https://github.com/spatie/activitylog
 
 __Laravel Localization__ https://github.com/spatie/activitylog
-
-__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 
 __Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 
@@ -308,6 +307,9 @@ __View Maker__ https://github.com/evercode1/view-maker
 ViewMaker is for use with the Laravel PHP framework (5.2 and up) Artisan command line tool.
 
 ViewMaker adds 10 new artisan commands, providing ready-made templates for CRUD generation, Views and Datagrids, with ajax-powered search, column sorts and pagination. You can create and test a foundation of code with crud and views in under a minute.
+
+__Laravel Widgets__ https://github.com/arrilot/laravel-widgets
+
 
 ## Recommend Packages
 
