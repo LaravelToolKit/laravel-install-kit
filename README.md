@@ -15,47 +15,46 @@ A simple Laravel PHP toolkit that contains and installs most of the Laravel pack
 ``` json
 
  "require": {
-   "php": "~5.5|~7.0",
-   "barryvdh/laravel-debugbar": "^2.2",
-   "laravelcollective/html": "^5.2",
-   "doctrine/dbal": "^2.5",
-   "barryvdh/laravel-ide-helper": "^2.1",
-   "maatwebsite/excel": "^2.1",
-   "spatie/laravel-analytics": "^1.3",
-   "spatie/laravel-medialibrary": "^3.17",
-   "spatie/laravel-permission": "^1.3",
-   "spatie/laravel-authorize": "^1.1",
-   "spatie/geocoder": "^2.1",
-   "mpociot/laravel-test-factory-helper": "^0.2.0",
-   "laravel/socialite": "^2.0",
-   "spatie/googlesearch": "^2.0",
-   "styde/html": "~1.1",
-   "laracasts/utilities": "^2.1",
-   "jeroen-g/laravel-packager": "^1.5",
-   "laracasts/flash": "^2.0",
-   "laracasts/generators": "^1.1",
-   "cviebrock/eloquent-sluggable": "^3.1",
-   "rap2hpoutre/laravel-log-viewer": "^0.6.0",
-   "vinkla/hashids": "^2.2",
-   "spatie/activitylog": "^2.4",
-   "mews/purifier": "^2.0",
-   "mcamara/laravel-localization": "^1.1",
-   "barryvdh/laravel-elfinder": "^0.3.7",
-   "greggilbert/recaptcha": "^2.1",
-   "sven/artisan-view": "^1.0",
-   "fedeisas/laravel-mail-css-inliner": "^1.4",
-   "davejamesmiller/laravel-breadcrumbs": "^3.0",
-   "kris/laravel-form-builder": "^1.6",
-   "sofa/revisionable": "^5.2",
-   "graham-campbell/exceptions": "^8.4",
-   "filp/whoops": "^2.1",
-   "ipunkt/laravel-analytics": "^1.1",
-   "sven/env-providers": "^2.0",
-   "infyomlabs/core-templates": "dev-master",
-   "infyomlabs/laravel-generator": "dev-master",
-   "infyomlabs/generator-builder": "dev-master",
-
-
+   "php": ">=5.5.9",
+       "barryvdh/laravel-debugbar": "^2.2",
+       "laravelcollective/html": "^5.2",
+       "doctrine/dbal": "^2.5",
+       "barryvdh/laravel-ide-helper": "^2.1",
+       "maatwebsite/excel": "^2.1",
+       "spatie/laravel-analytics": "^1.3",
+       "spatie/laravel-medialibrary": "^3.17",
+       "spatie/laravel-permission": "^1.3",
+       "spatie/laravel-authorize": "^1.1",
+       "spatie/geocoder": "^2.1",
+       "mpociot/laravel-test-factory-helper": "^0.2.0",
+       "laravel/socialite": "^2.0",
+       "spatie/googlesearch": "^2.0",
+       "styde/html": "~1.1",
+       "laracasts/utilities": "^2.1",
+       "jeroen-g/laravel-packager": "^1.5",
+       "laracasts/flash": "^2.0",
+       "laracasts/generators": "^1.1",
+       "cviebrock/eloquent-sluggable": "^3.1",
+       "rap2hpoutre/laravel-log-viewer": "^0.6.0",
+       "vinkla/hashids": "^2.2",
+       "spatie/activitylog": "^2.4",
+       "mews/purifier": "^2.0",
+       "mcamara/laravel-localization": "^1.1",
+       "barryvdh/laravel-elfinder": "^0.3.7",
+       "greggilbert/recaptcha": "^2.1",
+       "sven/artisan-view": "^1.0",
+       "fedeisas/laravel-mail-css-inliner": "^1.4",
+       "davejamesmiller/laravel-breadcrumbs": "^3.0",
+       "sofa/revisionable": "^5.2",
+       "graham-campbell/exceptions": "^8.4",
+       "filp/whoops": "^2.1",
+       "ipunkt/laravel-analytics": "^1.1",
+       "anahkiasen/former": "^4.0",
+       "proengsoft/laravel-jsvalidation": "^1.3",
+       "evercode1/view-maker": "^3.4",
+       "drawmyattention/laravel-make-resource": "~1.0",
+       "anahkiasen/underscore-php": "^2.0","jeroen-g/laravel-packager": "^1.5",
+       "arrilot/laravel-widgets": "^3.4"
 
   },
 
@@ -119,6 +118,8 @@ $providers => [
     Former\FormerServiceProvider::class,
     Proengsoft\JsValidation\JsValidationServiceProvider::class,
     Evercode1\ViewMaker\ViewMakerServiceProvider::class,
+    Arrilot\Widgets\ServiceProvider::class,
+    Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ]
 ```
@@ -152,6 +153,9 @@ $aliases => [
     'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
     'Former' => 'Former\Facades\Former',
     'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
+    'Widget'       => Arrilot\Widgets\Facade::class,
+    'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
+    'Module' => Nwidart\Modules\Facades\Module::class,
 
 
     ]
@@ -263,10 +267,8 @@ __Laravel Test Factory Generator__ https://github.com/mpociot/laravel-test-facto
 __Laravel Google Search__ https://github.com/spatie/googlesearch
 
 ``` bash
-
      php artisan vendor:publish --provider="Spatie\GoogleSearch\GoogleSearchServiceProvider"
-
- ```
+```
 
 __Laravel Flash__ https://github.com/laracasts/flash
 
@@ -281,8 +283,6 @@ __Laravel Activity Log__ https://github.com/spatie/activitylog
 __Laravel Localization__ https://github.com/spatie/activitylog
 
 __Laravel Localization__ https://github.com/spatie/activitylog
-
-__Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 
 __Laravel elFinder__ https://github.com/barryvdh/laravel-elfinder
 
@@ -310,9 +310,15 @@ ViewMaker is for use with the Laravel PHP framework (5.2 and up) Artisan command
 
 ViewMaker adds 10 new artisan commands, providing ready-made templates for CRUD generation, Views and Datagrids, with ajax-powered search, column sorts and pagination. You can create and test a foundation of code with crud and views in under a minute.
 
+__Laravel Widgets__ https://github.com/arrilot/laravel-widgets
+
+
 ## Recommend Packages
 
 __Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
+
+__Laravel Modules__
+https://github.com/nWidart/laravel-modules
 
 
 ## Change log
