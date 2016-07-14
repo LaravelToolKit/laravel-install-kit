@@ -119,6 +119,7 @@ $providers => [
     Proengsoft\JsValidation\JsValidationServiceProvider::class,
     Evercode1\ViewMaker\ViewMakerServiceProvider::class,
     Arrilot\Widgets\ServiceProvider::class,
+    Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ]
 ```
@@ -154,6 +155,7 @@ $aliases => [
     'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
     'Widget'       => Arrilot\Widgets\Facade::class,
     'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
+    'Module' => Nwidart\Modules\Facades\Module::class,
 
 
     ]
@@ -314,6 +316,9 @@ __Laravel Widgets__ https://github.com/arrilot/laravel-widgets
 ## Recommend Packages
 
 __Laravel Generators__ http://labs.infyom.com/laravelgenerator/docs/getting-started/installation
+
+__Laravel Modules__
+https://github.com/nWidart/laravel-modules
 
 
 ## Change log
